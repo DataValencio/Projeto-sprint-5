@@ -12,12 +12,5 @@ if hist_button:
             fig = px.histogram(car_data, x="odometer")
             st.plotly_chart(fig, use_container_width=True)
 
-build_histogram = st.checkbox('Criar um histograma')
-
-disp_button = st.button('Criar um grafico de dispersão')
-
-if disp_button:
-            st.write('Criando um grafico de dispersão, por favor aguarde...')
-            fig = px.scatter(car_data, x="odometer", y="price") 
-            fig.show()
-
+fig = px.scatter(car_data, x="odometer", y="price") 
+fig.show()
