@@ -16,5 +16,6 @@ disp_button = st.button('Criar um grafico de dispersão')
 
 if disp_button:
             st.write('Criando um grafico de dispersão, por favor aguarde...')
-            fig = px.scatter(car_data, x="odometer", y="price") # criar um gráfico de dispersão
-            fig.show()
+            fig1 = px.scatter(car_data, x="odometer", y="price") # criar um gráfico de dispersão
+            fig1.show()
+            
