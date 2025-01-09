@@ -5,9 +5,9 @@ import streamlit as st
 car_data = pd.read_csv('vehicles.csv')
 
 
-disp_button = st.button('Criar um grafico de dispersão')
 
-if disp_button:
+build_dispersao = st.checkbox('Criar um grafico de dispersão')
+if build_dispersao:
             st.write('Criando um grafico de dispersão, por favor aguarde...')
             fig1 = px.scatter(car_data, x="odometer", y="price") # criar um gráfico de dispersão
             fig1.show()
