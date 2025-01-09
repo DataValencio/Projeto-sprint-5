@@ -18,3 +18,10 @@ build_histogram = st.checkbox('Criar um histograma')
 if build_histogram:
   st.write('Criando um histograma para a coluna odometer')
 
+disp_button = st.button('Criar um grafico de dispersão')
+
+if disp_button:
+       st.write('Criando um grafico de dispersão, por favor aguarde...')
+       fig = px.scatter(car_data, x="odometer", y="price") 
+       fig.show()
+
